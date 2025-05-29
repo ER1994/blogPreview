@@ -13,10 +13,11 @@
     --gray-500: hsl(0, 0%, 42%);
     --white: hsl(0, 0%, 100%);
 
-    --text-preset1: 1.5rem/1.5 "Figtree Extra Bold" sans-serif;
-    --text-preset2: 1rem/1.5 "Figtree Medium" sans-serif;
-    --text-preset3: 0.88rem/1.5 "Figtree Medium" sans-serif;
-    --text-preset3-bold: 0.88rem/1.5 "Figtree Extra Bold" sans-serif;
+    --text-preset1: 1.5rem/1.5 "Figtree Extra Bold", sans-serif;
+    --text-preset1-mobile: 1.25rem/1.5 "Figtree Extra Bold", sans-serif;
+    --text-preset2: 1rem/1.5 "Figtree Medium", sans-serif;
+    --text-preset3: 0.88rem/1.5 "Figtree Medium", sans-serif;
+    --text-preset3-mobile: 0.75rem/1.5 "Figtree Bold", sans-serif;
 
     --spacing-300: 1.5rem;
     --spacing-150: 0.75rem;
@@ -28,5 +29,95 @@
 }
 
 html {
+    font: var(--text-preset2);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: var(--white);
+    box-sizing: border-box;
+    width: 327px;
+    border: 1px solid var(--gray-950);
+    border-radius: 1.25rem;
+    padding: var(--spacing-300);
+    font: var(--text-preset3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+    box-shadow: 0.5rem 0.5rem 0 0 black;
+}
+
+header img {
+    width: 100%;
+    height: 12.5rem;
+    object-fit: cover;
+    border-radius: 0.63rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-150);
+}
+
+.tag {
+    background-color: var(--yellow);
+    border-radius: var(--spacing-50);
+    font: var(--text-preset3-mobile);
+    font-weight: var(--weight-bold);
+    width: 25%;
+    padding: var(--spacing-50);
+    text-align: center;
+}
+
+.publish_date {
+    font: var(--text-preset3-mobile);
+}
+
+main h3 {
+    font: var(--text-preset1-mobile);
+    font-weight: var(--weight-bold);
+    margin: 0;
+    padding: 0;
+}
+
+main h3:hover {
+    color: var(--yellow);
+}
+
+footer {
+    font-weight: var(--weight-bold);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-150);
+}
+
+footer img {
+    width: 2rem;
+}
+
+@media (min-width: 1440px) {
+    body {
+        width: 384px;
+    }
+
+    .tag {
+        font: var(--text-preset3);
+        font-weight: var(--weight-bold);
+    }
+
+    .publish_date {
+        font: var(--text-preset3);
+    }
+
+    main h3 {
+        font: var(--text-preset1);
+        font-weight: var(--weight-bold);
+    }
 
 }
